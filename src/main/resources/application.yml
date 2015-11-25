@@ -1,0 +1,27 @@
+# EMBEDDED SERVER CONFIGURATION (ServerProperties)
+server:
+  port: 9000
+
+spring:
+# THYMELEAF (ThymeleafAutoConfiguration)
+  thymeleaf:
+    enabled: true
+    cache: false
+# INTERNATIONALIZATION (MessageSourceAutoConfiguration)
+  messages:
+    basename: messages
+    cache-seconds: -1
+    encoding: UTF-8
+#Database Configuration
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/actor_db
+    username: actor_user
+    password: actor_pass
+    initialize: false
+    continueOnError: true
+# JOOQ
+jooq:
+  sql:
+    dialect: MySQL
+
